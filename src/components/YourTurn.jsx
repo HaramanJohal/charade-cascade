@@ -17,7 +17,7 @@ export default function YourTurn(props) {
   const endTurn = (game_over=false) => {
     if (!game_over) {
       console.log("ending turn", turnUpdate)
-      fetch(`/end-turn?game_name=${turnUpdate["game_name"]}`, {
+      fetch(`https://charade-cascade.herokuapp.com/end-turn?game_name=${turnUpdate["game_name"]}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export default function YourTurn(props) {
         "blue_score": turnUpdate["blue_score"],
       }
       final_score[`${props.userTeam}_score`] = final_score[`${props.userTeam}_score`] + 1
-      fetch(`/end-game?game_name=${turnUpdate["game_name"]}`, {
+      fetch(`https://charade-cascade.herokuapp.com/end-game?game_name=${turnUpdate["game_name"]}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
