@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "656670443f250ced5e55580d56056651",
+    "revision": "700fed4a2f63a39a9015a17f69db1232",
     "url": "/charade-cascade/index.html"
   },
   {
-    "revision": "a6ccca95f056e581b8a0",
+    "revision": "15e2423835f9e0c86a0e",
     "url": "/charade-cascade/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/charade-cascade/static/js/2.67915964.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a6ccca95f056e581b8a0",
-    "url": "/charade-cascade/static/js/main.18674c48.chunk.js"
+    "revision": "15e2423835f9e0c86a0e",
+    "url": "/charade-cascade/static/js/main.ee7d91d0.chunk.js"
   },
   {
     "revision": "bb1c25303a2c6a6e83ea",

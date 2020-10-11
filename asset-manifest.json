@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/charade-cascade/static/css/main.5f361e03.chunk.css",
-    "main.js": "/charade-cascade/static/js/main.18674c48.chunk.js",
-    "main.js.map": "/charade-cascade/static/js/main.18674c48.chunk.js.map",
+    "main.js": "/charade-cascade/static/js/main.ee7d91d0.chunk.js",
+    "main.js.map": "/charade-cascade/static/js/main.ee7d91d0.chunk.js.map",
     "runtime-main.js": "/charade-cascade/static/js/runtime-main.e120a22a.js",
     "runtime-main.js.map": "/charade-cascade/static/js/runtime-main.e120a22a.js.map",
     "static/js/2.67915964.chunk.js": "/charade-cascade/static/js/2.67915964.chunk.js",
     "static/js/2.67915964.chunk.js.map": "/charade-cascade/static/js/2.67915964.chunk.js.map",
     "index.html": "/charade-cascade/index.html",
-    "precache-manifest.5b6661773453a9e1a2a93082b383e44a.js": "/charade-cascade/precache-manifest.5b6661773453a9e1a2a93082b383e44a.js",
+    "precache-manifest.bd655e3d36cbbebfcc5f78439a95b0f3.js": "/charade-cascade/precache-manifest.bd655e3d36cbbebfcc5f78439a95b0f3.js",
     "service-worker.js": "/charade-cascade/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/charade-cascade/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.67915964.chunk.js.LICENSE.txt": "/charade-cascade/static/js/2.67915964.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e120a22a.js",
     "static/js/2.67915964.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.18674c48.chunk.js"
+    "static/js/main.ee7d91d0.chunk.js"
   ]
 }
