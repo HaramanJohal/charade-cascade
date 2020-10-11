@@ -22,7 +22,8 @@ export default function YourTurn(props) {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(turnUpdate)
+        body: JSON.stringify(turnUpdate),
+        mode: 'no-cors'
       })
       .then(response => response.json())
       .then(game => {
@@ -41,7 +42,8 @@ export default function YourTurn(props) {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(final_score)
+        body: JSON.stringify(final_score),
+        mode: 'no-cors'
       })
       .then(response => response.json())
       .then(game => {

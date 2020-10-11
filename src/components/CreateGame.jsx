@@ -9,7 +9,7 @@ export default function CreateGame(props) {
 
   const handleCreateGame = (e) => {
     e.preventDefault()
-    fetch(`https://charade-cascade.herokuapp.com/create-game?game_name=${gameName}&user_name=${userName}&prompts=${prompts.join("£")}`)
+    fetch(`https://charade-cascade.herokuapp.com/create-game?game_name=${gameName}&user_name=${userName}&prompts=${prompts.join("£")}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(game => {
       console.log("created game", game)

@@ -9,7 +9,7 @@ export default function JoinGame(props) {
 
   const handleJoinGame = (e) => {
     e.preventDefault()
-    fetch(`https://charade-cascade.herokuapp.com/join-game?game_name=${gameName}&user_name=${userName}&prompts=${prompts.join("£")}`)
+    fetch(`https://charade-cascade.herokuapp.com/join-game?game_name=${gameName}&user_name=${userName}&prompts=${prompts.join("£")}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(game => {
       console.log("joined game", game)

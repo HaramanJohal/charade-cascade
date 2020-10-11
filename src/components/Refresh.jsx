@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Refresh(props) {
   const handleRefresh = () => {
-    fetch(`https://charade-cascade.herokuapp.com/refresh-game?game_name=${props.gameName}`)
+    fetch(`https://charade-cascade.herokuapp.com/refresh-game?game_name=${props.gameName}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(game => {
       console.log("refreshed game:", game)

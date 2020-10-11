@@ -6,7 +6,7 @@ export default function RejoinGame(props) {
 
   const handleRejoinGame = (e) => {
     e.preventDefault()
-    fetch(`https://charade-cascade.herokuapp.com/rejoin-game?game_name=${gameName}&user_name=${userName}`)
+    fetch(`https://charade-cascade.herokuapp.com/rejoin-game?game_name=${gameName}&user_name=${userName}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(game => {
       console.log("rejoined game", game)
