@@ -12,7 +12,7 @@ export default function CreateGame(props) {
     fetch(`/create-game?game_name=${gameName}&user_name=${userName}&prompts=${prompts.join("£")}`)
     .then(response => response.json())
     .then(game => {
-      console.log(game)
+      console.log("created game", game)
       props.setUserName(userName)
       props.setUserTeam(game["users"].find((user) => user["user_name"] === userName)["team"])
       props.setGame(game)

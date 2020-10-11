@@ -12,7 +12,7 @@ export default function JoinGame(props) {
     fetch(`/join-game?game_name=${gameName}&user_name=${userName}&prompts=${prompts.join("£")}`)
     .then(response => response.json())
     .then(game => {
-      console.log(game)
+      console.log("joined game", game)
       props.setUserName(userName)
       props.setUserTeam(game["users"].find((user) => user["user_name"] === userName)["team"])
       props.setGame(game)

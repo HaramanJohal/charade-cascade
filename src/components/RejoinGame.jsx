@@ -4,12 +4,12 @@ export default function RejoinGame(props) {
   const [gameName, setGameName] = useState("")
   const [userName, setUserName] = useState("")
 
-  const handleJoinGame = (e) => {
+  const handleRejoinGame = (e) => {
     e.preventDefault()
     fetch(`/rejoin-game?game_name=${gameName}&user_name=${userName}`)
     .then(response => response.json())
     .then(game => {
-      console.log(game)
+      console.log("rejoined game", game)
       props.setUserName(userName)
       props.setUserTeam(game["users"].find((user) => user["user_name"] === userName)["team"])
       props.setGame(game)
@@ -25,7 +25,7 @@ export default function RejoinGame(props) {
   }
 
   return(
-    <form onSubmit={handleJoinGame}>
+    <form onSubmit={handleRejoinGame}>
       <label>Game name:
         <input type="text" value={gameName} onChange={handleChangeGameName} />
       </label>
