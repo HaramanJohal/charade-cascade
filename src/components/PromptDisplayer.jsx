@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-// function shuffleArray(array) {
-//   for (let i = array.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [array[i], array[j]] = [array[j], array[i]];
-//   }
-// }
-
 export default function PromptDisplayer(props) {
   
   const [remainingPrompts, setRemainingPrompts] = useState(props.game["prompts"])
@@ -28,11 +21,11 @@ export default function PromptDisplayer(props) {
   
     let nextPrompt
     if (speech_remaining.length !== 0) {
-      nextPrompt = speech_remaining[0]
+      nextPrompt = speech_remaining[Math.floor(Math.random() * speech_remaining.length)]
     } else if (word_remaining.length !== 0) {
-      nextPrompt = word_remaining[0]
+      nextPrompt = word_remaining[Math.floor(Math.random() * word_remaining.length)]
     } else if (charade_remaining.length !== 0) {
-      nextPrompt = charade_remaining[0]
+      nextPrompt = charade_remaining[Math.floor(Math.random() * charade_remaining.length)]
     } else {
       return null
     }
@@ -65,6 +58,21 @@ export default function PromptDisplayer(props) {
     <>
       { (currentPrompt !== undefined && currentPrompt !== null) ?
         <>
+          {
+            currentPrompt["game_round"] === "speech" ?
+            <p>Use words to describe the prompt</p>
+            : null
+          }
+          {
+            currentPrompt["game_round"] === "word" ?
+            <p>Use a single word to describe the prompt</p>
+            : null
+          }
+          {
+            currentPrompt["game_round"] === "charade" ?
+            <p>Act our the prompt in silence</p>
+            : null
+          }
           <p>{currentPrompt["prompt"]}</p>
           <button onClick={handleGotIt}>Got it!</button>
         </>

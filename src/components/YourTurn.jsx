@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import PromptDisplayer from './PromptDisplayer';
 
-const turnTime = 5
+const turnTime = 60
 
 export default function YourTurn(props) {
   const [timeRemaining, setTimeRemaining] = useState(undefined)
@@ -35,7 +35,7 @@ export default function YourTurn(props) {
         "red_score": turnUpdate["red_score"],
         "blue_score": turnUpdate["blue_score"],
       }
-      // final_score[`${userTeam}_score`]
+      final_score[`${props.userTeam}_score`] = final_score[`${props.userTeam}_score`] + 1
       fetch(`/end-game?game_name=${turnUpdate["game_name"]}`, {
         method: 'POST',
         headers: {

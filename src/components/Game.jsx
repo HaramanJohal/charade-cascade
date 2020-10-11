@@ -22,10 +22,10 @@ export default function Game(props) {
         <p>Blue Team ({game["game"]["blue_score"]}):</p>
         {game["users"].filter((user) => user["team"] === "blue").map((user) => <p>{user["user_name"]}</p>)}
         <p>There are {game["prompts"].length} prompts left</p>
+        <Refresh gameName={game["game"]["game_name"]} setGame={setGame}/>
         {
           (!game["game"]["game_over"]) ?
           <>
-            <Refresh gameName={game["game"]["game_name"]} setGame={setGame}/>
             <Turn game={game} userName={userName} userTeam={userTeam} setGame={setGame} />
           </>
           : 
